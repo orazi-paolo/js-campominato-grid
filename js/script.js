@@ -17,6 +17,7 @@ const selectField = document.getElementById('difficulty');
 
 // quando clicco su play genero le celle con dentro i numeri
 buttonPlay.addEventListener('click', function (){
+    grid.innerHTML = '';
     // se l utente ha scelto easy
     if(selectField.value === 'easy'){
         for(let i = 1; i <= 100; i++){
@@ -24,14 +25,15 @@ buttonPlay.addEventListener('click', function (){
             cell.classList.add('cell-easy');
             cell.innerText = `${i}`;
             grid.appendChild(cell);
-    
-            /* #MILESTONE 4  OK */
-    
             // al click sulla cella stampo in console il suo contenuto
-            cell.addEventListener('click', function(){
+            cell.addEventListener('click', function() {
                 console.log(this.textContent);
-                // alla cella cliccata aggiungo due classi
-                this.classList.add('bg-blue', 'color-white');
+                // se contiene già le classi le rimuovo al contrario le inserisco
+                if (this.classList.contains('bg-blue') && this.classList.contains('color-white')) {
+                    this.classList.remove('bg-blue', 'color-white');
+                } else {
+                    this.classList.add('bg-blue', 'color-white');
+                }
             })
         }
         // se l utente ha scelto medium
@@ -42,10 +44,14 @@ buttonPlay.addEventListener('click', function (){
             cell.innerText = `${i}`;
             grid.appendChild(cell);
             // al click sulla cella stampo in console il suo contenuto
-            cell.addEventListener('click', function(){
+            cell.addEventListener('click', function() {
                 console.log(this.textContent);
-                // alla cella cliccata aggiungo due classi
-                this.classList.add('bg-blue', 'color-white');
+                // se contiene già le classi le rimuovo al contrario le inserisco
+                if (this.classList.contains('bg-blue') && this.classList.contains('color-white')) {
+                    this.classList.remove('bg-blue', 'color-white');
+                } else {
+                    this.classList.add('bg-blue', 'color-white');
+                }
             })
         } //se l utente ha scelto hard
     }else if(selectField.value === 'hard'){
@@ -55,10 +61,14 @@ buttonPlay.addEventListener('click', function (){
             cell.innerText = `${i}`;
             grid.appendChild(cell);
             // al click sulla cella stampo in console il suo contenuto
-            cell.addEventListener('click', function(){
+            cell.addEventListener('click', function() {
                 console.log(this.textContent);
-                // alla cella cliccata aggiungo due classi
-                this.classList.add('bg-blue', 'color-white');
+                // se contiene già le classi le rimuovo al contrario le inserisco
+                if (this.classList.contains('bg-blue') && this.classList.contains('color-white')) {
+                    this.classList.remove('bg-blue', 'color-white');
+                } else {
+                    this.classList.add('bg-blue', 'color-white');
+                }
             })
         }
     }
