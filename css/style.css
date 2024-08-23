@@ -29,7 +29,7 @@ footer{
     border-radius: 10px;
 }
 /* utils */
-.cell{
+.cell-easy{
     height: calc(100% / 10);
     flex-basis: calc(100% / 10);
     border: 1px solid;
@@ -37,6 +37,25 @@ footer{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+.cell-medium{
+    height: calc(100% / 9);
+    flex-basis: calc(100% / 9);
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.cell-hard{
+    height: calc(100% / 7);
+    flex-basis: calc(100% / 7);
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
 }
 .bg-blue{
     background-color: blue;
