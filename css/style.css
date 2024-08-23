@@ -36,6 +36,13 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+.bg-blue{
+    background-color: blue;
+}
+.color-white{
+    color: white;
 }
 /* /////////////////////// */
 .grid{
